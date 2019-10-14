@@ -20,7 +20,7 @@ export class UserProfileComponent implements OnInit {
    
   }
 
-  showAge: boolean = true;
+ 
   
 
 }

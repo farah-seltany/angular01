@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular01';
+  counter: number = 0;
+
+  incrementCounter()
+  {
+    this.counter = this.counter + 1;
+  }
 }
