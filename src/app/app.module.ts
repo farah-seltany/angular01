@@ -25,7 +25,7 @@ import { MenuComponent } from './menu/menu.component';
     DisplayMoviesDirective,
     ClickComponent,
     DisplayCounterComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

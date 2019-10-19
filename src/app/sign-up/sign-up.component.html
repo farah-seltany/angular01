@@ -1,1 +1,35 @@
-<h1>emailRenseignéDansInput</h1><input type="email" name="email"/>
+<h1>Sign Up</h1>
+<form (submit)="signUpForm.valid && send()" #signUpForm="ngForm">
+    <div>
+        <label>User : </label>
+        <input type="text" name="user" [(ngModel)]="user" required minlength="4" maxlength="25" #userRef="ngModel">
+    </div>
+
+    <div *ngIf="signUpForm.submitted">
+        <div *ngIf="userRef.errors?.required">
+            Le champ est requis
+        </div>
+        <div *ngIf="userRef.errors?.maxlength">
+            Le champ user ne doit pas dépasser 25 caractères
+        </div>
+        <div *ngIf="userRef.errors?.minlength">
+            Le champ user doit contenir plus de 3 caractères
+        </div>
+    </div>
+
+    <div>
+        <label>Email : </label>
+        <input type="email" [(ngModel)]="email" name="email" required email #emailRef="ngModel"/>
+    </div>
+    <div *ngIf="signUpForm.submitted">
+        <div *ngIf="emailRef.errors?.required">
+            Le champ est requis
+        </div>
+        <div *ngIf="emailRef.errors?.email">
+            Le champ email est invalide
+        </div>
+    </div>
+    <div *ngIf="signUpForm.submitted"></div>
+    <button>Sign Up</button>
+   
+</form>

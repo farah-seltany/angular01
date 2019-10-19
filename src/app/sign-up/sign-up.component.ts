@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class SignUpComponent implements OnInit {
 
   email : string;
+  user: string;
   constructor() { 
     this.email;
+    this.user
   }
 
   ngOnInit() {
